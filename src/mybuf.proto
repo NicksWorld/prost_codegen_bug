@@ -1,0 +1,9 @@
+package broken;
+
+enum BrokenEnum {
+  k_EThisWillBreak = 1;
+}
+
+message CaseChangingIsBroken {
+  required BrokenEnum broken_type = 1 [default = k_EThisWillBreak];
+}
